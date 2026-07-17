@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 224 100% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 100% 53%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-[#1053FF] to-[#6b8cff] bg-clip-text text-transparent;
+  }
+
+  .bg-glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+
+  .bg-glass-dark {
+    @apply bg-[#0f1b3d]/80 backdrop-blur-xl border border-white/10;
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 40px rgba(16, 83, 255, 0.15);
+  }
+
+  .shadow-glow-strong {
+    box-shadow: 0 0 60px rgba(16, 83, 255, 0.3);
+  }
+}
